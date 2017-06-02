@@ -6,13 +6,13 @@ int main(int argc, char** argv)
     DataParser file("values.vili"); //Opening and parsing the file 'values.vili'
 
     //Get BaseAttribute "name"
-    std::cout << "Hello my name is " << *file.at<BaseAttribute>("name") << ", "; 
+    std::cout << "Hello my name is " << file.at<BaseAttribute>("name") << ", "; 
     //Get BaseAttribute "age"
-    std::cout << "I'm " << *file.at<BaseAttribute>("age") << " and I'm";
+    std::cout << "I'm " << file.at<BaseAttribute>("age") << " and I'm";
     //Display "not" if BaseAttribute "beautiful" is set to "False"
     std::cout << (file.at<BaseAttribute>("beautiful")->get<bool>() ? " " : " not ") << "beautiful. "; <<
-    //Displat BaseAttribute "height"
-    std::cout << "Also, I'm about " << *file.at<BaseAttribute>("height") << "m tall";
+    //Display BaseAttribute "height"
+    std::cout << "Also, I'm about " << file.at<BaseAttribute>("height") << "m tall";
     std::cout << std::endl;
 
     std::cout << "TRANSFORMATION ! Start the program again to see the other person" << std::endl;
